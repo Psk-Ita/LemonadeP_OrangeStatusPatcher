@@ -1,0 +1,41 @@
+
+name: Build Module
+
+on:
+  push:
+    branches: ['main']
+    tags:
+    - '*'
+
+env:
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    name: Build Module
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+
+    steps:          
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get Id
+        id: mId
+        run: echo "id=$(grep "^id=" module.prop|cut -d'=' -f2)" >> $GITHUB_OUTPUT
+        
+      - name: Get Version
+        id: mVersion
+        run: echo "version=$(grep "^version=" module.prop|cut -d'=' -f2)" >> $GITHUB_OUTPUT
+
+      - name: Build project
+        run: zip -r "${{ steps.mId.outputs.id }}.${{ steps.mVersion.outputs.version }}.zip" . -x "README.md" ".git/*" ".github/*" 
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "${{ steps.mId.outputs.id }}.${{ steps.mVersion.outputs.version }}.zip"
+          tag: ${{ steps.mVersion.outputs.version }}
