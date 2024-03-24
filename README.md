@@ -3,7 +3,7 @@
 
 
 how it works:
-the module updates the abl partition with an clean boot message.
+the module updates the abl partition with an clean image.
 
 <b>N.B.:</b>
 read carefully the related thread on <a href=https://forum.xda-developers.com/t/remove-oos13-orange-state-message-text.4520727>xda</a>.
