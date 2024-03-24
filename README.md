@@ -9,6 +9,7 @@ N.B.:
 read carefully the related thread on <a href=https://forum.xda-developers.com/t/remove-oos13-orange-state-message-text.4520727>xda</a>.
 
 flash it at your risk, i'll not be responsible of any damage on your device
+
 to revert, just flash the latest update locally (if on OOS) or flash the latest firmware (if on custom rom)
 
 thanks to <a href=https://xdaforums.com/m/uparrows.9196007>UpArrows</a> for the first successfully attempt
