@@ -1,8 +1,8 @@
 id=LemonadeP_OrangeStatusPatcher
 name=Orange status message patcher
-version=v0.0.2
-versionCode=32
-author=Psk.It
-description=Remove orange status boot message on OnePlus 9 Pro
-updateJson=https://raw.githubusercontent.com/Psk-Ita/LemonadeP_OrangeStatusPatcher/master/info/update.json
 minApi=13
+author=Psk.It
+version=v0.0.2
+updateJson=https://raw.githubusercontent.com/Psk-Ita/LemonadeP_OrangeStatusPatcher/master/.github/update.json
+versionCode=32
+description=Remove orange status boot message on OnePlus 9 Pro
